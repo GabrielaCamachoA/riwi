@@ -32,7 +32,7 @@ while True:
   try:
     descuento = int(input("Ingrese el porcentaje del descuento -> "))
     #Acá validamos si el descuento esta dentro del rango de 0 a 100 y positivo
-    if type(descuento).__name__ == "int" or type(descuento).__name__ == "int" > 100:
+    if type(descuento).__name__ == "int" and descuento >=  0 and descuento <=  100:
       break
   except ValueError:
     print("-------")
