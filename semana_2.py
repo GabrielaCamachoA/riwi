@@ -22,16 +22,15 @@ while True:
 
 
 #Ejercicio 3
-""" numero = [30,-2,100,20,200]
+""" numero = [30,-2,100,20,200,60]
 while True:
-    for j in range(5):
+    for j in range(6):
         num = numero[j]
         if num < 0:
             print("Se encontro un numero negativo")
-            break
-        elif num > 100:
+        if num > 100:
             continue
-        elif num > 50:
+        if num > 50:
             print(num)
     break """
 
@@ -44,9 +43,10 @@ while True:
         break
     print(i) """
 
-""" numeros_ingresados = 0 """
+
 #Ejercicio 5
-""" while True: 
+""" numeros_ingresados = 0
+while True: 
     numero = int(input("Ingresa un numero entero: "))
     numeros_ingresados+=1
     if numero < 0:
@@ -54,8 +54,8 @@ while True:
       continue
     elif numero == 0:
        print(f"Hiciste {numeros_ingresados} intentos")
-       break """
-
+       break
+ """
 
 #Ejercicio 6
 """ texto = "HolaAchicOs, saludos"
