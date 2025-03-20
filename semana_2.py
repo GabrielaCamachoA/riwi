@@ -31,7 +31,7 @@ while True:
         if num > 100:
             continue
         if num > 50:
-            print(num)
+            print(f"Estos fueron los numeros mayores a 50: {num}")
     break """
 
 
@@ -47,24 +47,29 @@ while True:
 #Ejercicio 5
 """ numeros_ingresados = 0
 while True: 
-    numero = int(input("Ingresa un numero entero: "))
-    numeros_ingresados+=1
-    if numero < 0:
-      print("El numero es negativo")
-      continue
-    elif numero == 0:
-       print(f"Hiciste {numeros_ingresados} intentos")
-       break
- """
+    try:
+        numero = int(input("Ingresa un numero entero: "))
+        numeros_ingresados+=1
+        if type(numero).__name__ != "int":
+          numero = int(input("Ingresa un numero entero: "))
+        elif numero < 0:
+          print("Se encontro un numero negativo")
+          continue
+        elif numero == 0:
+          print(f"Hiciste {numeros_ingresados} intentos")
+          break
+    except ValueError:
+       print("Error!!!") """
+
 
 #Ejercicio 6
 """ texto = "HolaAchicOs, saludos"
 iteracion = 0
-for letra in texto:
-    if letra == "a" or letra == "A" or letra == "e" or letra == "E" or letra == "i" or letra == "I" or letra== "o" or letra == "O" or letra== "u" or letra == "U":
+for vocal in texto:
+    if vocal == "a" or vocal == "A" or vocal == "e" or vocal == "E" or vocal == "i" or vocal == "I" or vocal== "o" or vocal == "O" or vocal== "u" or vocal == "U":
         print("Vocal")
         iteracion += 1
         continue
-    if letra == " ":
+    if vocal == " ":
         break
 print(f"El total de vocales encontradas fueron: {iteracion}") """
